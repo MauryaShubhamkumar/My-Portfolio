@@ -4,294 +4,535 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SKM Portfolio</title>
+    <title>Shubham Kumar Maurya — Portfolio</title>
+    <meta name="description"
+        content="Portfolio of Shubham Kumar Maurya — Frontend Developer & CS student at IIT Jammu." />
     <link rel="stylesheet" href="style.css" />
-
-    <!-- box icon -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <!-- Box Icons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 </head>
 
 <body>
-    <!-- header design -->
-    <header class="header">
-        <a href="#" class="logo">shubh. <span class="animate" style="--i:1;"></span></a>
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
 
-        <div class="bx bx-menu" id="menu-icon"><span class="animate" style="--i:2;"></span></div>
+    <!-- Particle Canvas -->
+    <canvas id="particles-canvas"></canvas>
 
-        <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#education">Education</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
-            <span class="active-nav"> </span>
-            <span class="animate" style="--i:2;"></span>
+    <!-- Animated Background Blobs -->
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <a href="#home" class="logo">
+            <span class="logo-text">SKM</span>
+            <span class="logo-dot">.</span>
+        </a>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <nav class="navbar" id="navbar">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#education" class="nav-link">Journey</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#contact" class="nav-link">Contact</a>
+            <span class="nav-indicator"></span>
         </nav>
     </header>
 
-
-    <!-- home section design -->
+    <!-- Home Section -->
     <section class="home show-animate" id="home">
-        <div class="home-content">
-            <h1>Hi, I'm <span>Shubham Kumar Maurya</span> <span class="animate" style="--i:2;"></span></h1>
+        <div class="home-content" data-reveal="left">
+            <h1>I'm <span class="gradient-text">Shubham Kumar Maurya</span></h1>
             <div class="text-animate">
-                <h3>
-                    Frontend Developer
-                </h3>
-                <span class="animate" style="--i:3;"></span>
+                <h3><span id="typed-text"></span><span class="typed-cursor">|</span></h3>
             </div>
-            <p>
-                Hello! I'm a passionate and dedicated developer currently pursuing a Bachelor of Technology in Computer
-                Science at the Indian Institute of Technology Jammu. With a strong foundation in computer science.
-                <span class="animate" style="--i:4;"></span>
+            <p class="home-desc">
+                A passionate developer at <strong>IIT Jammu</strong>, crafting elegant digital experiences with code
+                and creativity. Dedicated to building fast, beautiful, and meaningful software.
             </p>
             <div class="btn-box">
-                <a href="#" class="btn">Download CV</a>
-                <a href="http://www.linkedin.com/in/shubham-kumar-maurya-46455a24b" class="btn">Let's Talk</a>
-                <span class="animate" style="--i:5;"></span>
+                <a href="#" class="btn btn-primary">
+                    <i class='bx bxs-download'></i> Download CV
+                </a>
+                <a href="http://www.linkedin.com/in/shubham-kumar-maurya-46455a24b" target="_blank"
+                    class="btn btn-outline">
+                    <i class='bx bxl-linkedin'></i> Let's Talk
+                </a>
+            </div>
+            <div class="home-sci">
+                <a href="http://www.linkedin.com/in/shubham-kumar-maurya-46455a24b" target="_blank" class="sci-link"
+                    aria-label="LinkedIn">
+                    <i class='bx bxl-linkedin'></i>
+                </a>
+                <a href="https://github.com/MauryaShubhamkumar" target="_blank" class="sci-link" aria-label="GitHub">
+                    <i class='bx bxl-github'></i>
+                </a>
+                <a href="https://www.instagram.com/shubham6.022?utm_source=qr" target="_blank" class="sci-link"
+                    aria-label="Instagram">
+                    <i class='bx bxl-instagram'></i>
+                </a>
             </div>
         </div>
-        <div class="home-sci">
 
-            <a href="http://www.linkedin.com/in/shubham-kumar-maurya-46455a24b"><i class='bx bxl-linkedin'></i></a>
-            <a href="https://github.com/MauryaShubhamkumar"><i class='bx bxl-github'></i></a>
-            <a href="https://www.instagram.com/shubham6.022?utm_source=qr"><i class='bx bxl-instagram'></i></i></a>
-            <span class="animate" style="--i:6;"></span>
+        <div class="home-img" data-reveal="right">
+            <div class="img-wrapper">
+                <div class="orbit-ring ring-1"></div>
+                <div class="orbit-ring ring-2"></div>
+                <div class="orbit-dot"></div>
+                <div class="img-glow"></div>
+                <img src="images/hero_tech.png" alt="Tech Developer Illustration" class="hero-tech-img" />
+            </div>
         </div>
-        <div class="home-imgHover"></div>
-        <span class="animate home-img" style="--i:7;"></span>
     </section>
 
-    <!-- about section design -->
+    <!-- About Section -->
     <section class="about" id="about">
-        <h2 class="heading">About <span>Me</span><span class="animate scroll" style="--i:1;"></span> </h2>
-        <div class="about-img">
-            <img src="images/about.jpg" alt="">
-            <span class="circle-spin"></span>
-            <span class="animate scroll" style="--i:2;"></span>
-
+        <div class="section-header" data-reveal="up">
+            <span class="section-tag">Get to know me</span>
+            <h2 class="heading">About <span class="gradient-text">Me</span></h2>
         </div>
-        <div class="about-content">
-            <h3>Frontend Developer!<span class="animate scroll" style="--i:3;"></span></h3>
-            <p>With a strong foundation in computer science and a keen interest in frontend development and software
-                engineering, I specialize in HTML, CSS, JavaScript, React, C/C++, and Python. Fluent in both English and Hindi, I'm excited to showcase my
-                projects and skills, and I'm looking forward to connecting with like-minded individuals.
-                <span class="animate scroll" style="--i:4;"></span>
-            </p>
-            <div class="btn-box btns">
-                <a href="#" class="btn">Read More</a>
-                <span class="animate scroll" style="--i:5;"></span>
+        <div class="about-container">
+            <div class="about-img" data-reveal="left">
+                <div class="about-img-wrapper">
+                    <img src="images/about.jpg" alt="About Shubham" />
+                    <span class="circle-spin"></span>
+                    <div class="about-img-glow"></div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card glass-card">
+                        <span class="stat-number">3+</span>
+                        <span class="stat-label">Years Coding</span>
+                    </div>
+                    <div class="stat-card glass-card">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-card glass-card">
+                        <span class="stat-number">IIT</span>
+                        <span class="stat-label">Jammu</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-content glass-card" data-reveal="right">
+                <span class="about-tag">Frontend Developer</span>
+                <h3>Turning Ideas Into <span class="gradient-text">Reality</span></h3>
+                <p>
+                    With a strong foundation in computer science and a keen interest in frontend development and
+                    software engineering, I specialize in <strong>HTML, CSS, JavaScript, React, C/C++, and
+                        Python</strong>.
+                </p>
+                <p>
+                    Studying at Indian Institute of Technology Jammu, I'm constantly pushing the boundaries of what I
+                    can create. Fluent in English and Hindi — I love collaborating with like-minded individuals on
+                    innovative ideas.
+                </p>
+                <div class="about-info">
+                    <div class="info-item">
+                        <i class='bx bxs-map'></i>
+                        <span>Jammu, India</span>
+                    </div>
+                    <div class="info-item">
+                        <i class='bx bxs-graduation'></i>
+                        <span>B.Tech CS — IIT Jammu</span>
+                    </div>
+                    <div class="info-item">
+                        <i class='bx bxs-envelope'></i>
+                        <span>maurya.shubhamkumar@iitjammu.ac.in</span>
+                    </div>
+                </div>
+                <a href="#contact" class="btn btn-primary" style="margin-top:2rem;display:inline-flex;">
+                    <i class='bx bxs-send'></i> Hire Me
+                </a>
             </div>
         </div>
     </section>
 
-
-    <!-- education section design -->
-
-
+    <!-- Education & Experience Section -->
     <section class="education" id="education">
-        <h2 class="heading">My <span>Journey</span><span class="animate scroll" style="--i:1;"></span></h2>
-
+        <div class="section-header" data-reveal="up">
+            <span class="section-tag">My background</span>
+            <h2 class="heading">My <span class="gradient-text">Journey</span></h2>
+        </div>
         <div class="education-row">
-            <div class="education-column">
-                <h3 class="title">Education <span class="animate scroll" style="--i:2;"></span></h3>
-
-                <div class="education-box">
-                    <div class="education-content">
-                        <div class="content">
-                            <div class="year">
-                                <i class='bx bxs-calendar'></i>2022-2026
-                            </div>
-                            <h3>Bachelor of Technology</h3>
-                            <p>I am currently pursuing a Bachelor of Technology in Computer Science at the <b>Indian Institute of Technology Jammu</b>. I am grateful for the opportunity to be part of this esteemed institute, which provides an excellent environment to learn new and innovative concepts.</p>
+            <!-- Education Column -->
+            <div class="education-column" data-reveal="left">
+                <h3 class="column-title">
+                    <i class='bx bxs-graduation'></i> Education
+                </h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card glass-card">
+                            <div class="timeline-year"><i class='bx bxs-calendar'></i> 2022 – 2026</div>
+                            <h4>Bachelor of Technology</h4>
+                            <span class="timeline-org">Indian Institute of Technology, Jammu</span>
+                            <p>Pursuing B.Tech in Computer Science. Grateful to be part of this esteemed institute,
+                                learning innovative and cutting-edge concepts in CS.</p>
                         </div>
                     </div>
-
-                    <div class="education-content">
-                        <div class="content">
-                            <div class="year">
-                                <i class='bx bxs-calendar'></i>2019-2021
-                            </div>
-                            <h3>Intermediate Education</h3>
-                            <p>I completed my 11th and 12th grades from the prestigious Central Hindu Boys School (BHU) in Varanasi, with a focus on Mathematics, Physics, Chemistry, and English, and achieved 85.6% in my 12th CBSE board exam.</p>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card glass-card">
+                            <div class="timeline-year"><i class='bx bxs-calendar'></i> 2019 – 2021</div>
+                            <h4>Intermediate Education (12th)</h4>
+                            <span class="timeline-org">Central Hindu Boys School (BHU), Varanasi</span>
+                            <p>Mathematics, Physics, Chemistry & English. Scored <strong>85.6%</strong> in CBSE 12th
+                                Board Exam.</p>
                         </div>
                     </div>
-
-                    <div class="education-content">
-                        <div class="content">
-                            <div class="year">
-                                <i class='bx bxs-calendar'></i>2013-2019
-                            </div>
-                            <h3>High School</h3>
-                            <p>I completed my 10th grade from Oasis Public School in Varanasi, with major subjects in Mathematics, Science, English, Hindi, Computer Science, and Social Science, and achieved an impressive 94.2%.</p>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card glass-card">
+                            <div class="timeline-year"><i class='bx bxs-calendar'></i> 2013 – 2019</div>
+                            <h4>High School (10th)</h4>
+                            <span class="timeline-org">Oasis Public School, Varanasi</span>
+                            <p>Major subjects: Mathematics, Science, Computer Science. Achieved an impressive
+                                <strong>94.2%</strong>.
+                            </p>
                         </div>
                     </div>
-                    <span class="animate scroll" style="--i:3;"></span>
                 </div>
             </div>
 
-            <div class="education-column">
-                <h3 class="title">Experience <span class="animate scroll" style="--i:5;"></span></h3>
-
-                <div class="education-box">
-                    <div class="education-content">
-                        <div class="content">
-                            <div class="year">
-                                <i class='bx bxs-calendar'></i>2023-2024
-                            </div>
-                            <h3>Web Developer - Company</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, maxime. Cupiditate
-                                inventore quis aut asperiores nostrum, iure cumque harum neque.</p>
+            <!-- Experience Column -->
+            <div class="education-column" data-reveal="right">
+                <h3 class="column-title">
+                    <i class='bx bxs-briefcase'></i> Experience
+                </h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card glass-card">
+                            <div class="timeline-year"><i class='bx bxs-calendar'></i> 2024</div>
+                            <h4>Frontend Developer Intern</h4>
+                            <span class="timeline-org">Open Source Contributor</span>
+                            <p>Contributed to open-source projects, building UI components with React and learning
+                                real-world collaborative development workflows.</p>
                         </div>
                     </div>
-
-                    <div class="education-content">
-                        <div class="content">
-                            <div class="year">
-                                <i class='bx bxs-calendar'></i>2023-2024
-                            </div>
-                            <h3>Web Developer - Company</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, maxime. Cupiditate
-                                inventore quis aut asperiores nostrum, iure cumque harum neque.</p>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card glass-card">
+                            <div class="timeline-year"><i class='bx bxs-calendar'></i> 2023</div>
+                            <h4>Web Development Projects</h4>
+                            <span class="timeline-org">IIT Jammu — Personal Projects</span>
+                            <p>Designed and developed multiple web applications using HTML, CSS, JavaScript and React.
+                                Focused on responsive, accessible designs.</p>
                         </div>
                     </div>
-
-                    <div class="education-content">
-                        <div class="content">
-                            <div class="year">
-                                <i class='bx bxs-calendar'></i>2023-2024
-                            </div>
-                            <h3>Web Developer - Company</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, maxime. Cupiditate
-                                inventore quis aut asperiores nostrum, iure cumque harum neque.</p>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card glass-card">
+                            <div class="timeline-year"><i class='bx bxs-calendar'></i> 2023</div>
+                            <h4>Competitive Programming</h4>
+                            <span class="timeline-org">Codeforces / LeetCode</span>
+                            <p>Active competitive programmer solving algorithmic problems in C++. Improved DSA skills
+                                and problem-solving methodologies.</p>
                         </div>
                     </div>
-                    <span class="animate scroll" style="--i:6;"></span>
                 </div>
             </div>
         </div>
     </section>
 
-
-
-    <!-- Skills section design -->
-
+    <!-- Skills Section -->
     <section class="skills" id="skills">
-        <h2 class="heading">My <span>Skills</span> <span class="animate scroll" style="--i:1;"></span></h2>
+        <div class="section-header" data-reveal="up">
+            <span class="section-tag">What I know</span>
+            <h2 class="heading">My <span class="gradient-text">Skills</span></h2>
+        </div>
         <div class="skills-row">
-            <div class="skills-column">
-                <h3 class="title">Coding Skills <span class="animate scroll" style="--i:2;"></span></h3>
-                <div class="skills-box">
-                    <div class="skills-content">
-                        <div class="progress">
-                            <h3>HTML <span>90%</span></h3>
-                            <div class="bar"><span> </span></div>
+            <div class="skills-column" data-reveal="left">
+                <h3 class="column-title"><i class='bx bxs-code-alt'></i> Coding Skills</h3>
+                <div class="skills-content glass-card">
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name"><i class='bx bxl-html5'></i> HTML5</span>
+                            <span class="skill-percent">90%</span>
                         </div>
-                        <div class="progress">
-                            <h3>CSS <span>80%</span></h3>
-                            <div class="bar"><span> </span></div>
-                        </div>
-                        <div class="progress">
-                            <h3>JavaScript <span>75%</span></h3>
-                            <div class="bar"><span> </span></div>
-                        </div>
-                        <div class="progress">
-                            <h3>C/C++ <span>98%</span></h3>
-                            <div class="bar"><span> </span></div>
-                        </div>
+                        <div class="skill-bar"><span class="skill-fill" data-width="90"></span></div>
                     </div>
-                    <span class="animate scroll" style="--i:3;"></span>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name"><i class='bx bxl-css3'></i> CSS3</span>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="skill-bar"><span class="skill-fill" data-width="80"></span></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name"><i class='bx bxl-javascript'></i> JavaScript</span>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                        <div class="skill-bar"><span class="skill-fill" data-width="75"></span></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name"><i class='bx bxl-react'></i> React</span>
+                            <span class="skill-percent">65%</span>
+                        </div>
+                        <div class="skill-bar"><span class="skill-fill" data-width="65"></span></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name"><i class='bx bxs-chip'></i> C / C++</span>
+                            <span class="skill-percent">98%</span>
+                        </div>
+                        <div class="skill-bar"><span class="skill-fill" data-width="98"></span></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name"><i class='bx bxl-python'></i> Python</span>
+                            <span class="skill-percent">70%</span>
+                        </div>
+                        <div class="skill-bar"><span class="skill-fill" data-width="70"></span></div>
+                    </div>
                 </div>
             </div>
 
-            <div class="skills-column">
-                <h3 class="title">Professional Skills <span class="animate scroll" style="--i:5;"></span></h3>
-                <div class="skills-box">
-                    <div class="skills-content">
-                        <div class="progress">
-                            <h3>Video Editing <span>65%</span></h3>
-                            <div class="bar"><span> </span></div>
+            <div class="skills-column" data-reveal="right">
+                <h3 class="column-title"><i class='bx bxs-star'></i> Professional Skills</h3>
+                <div class="skills-content glass-card">
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name"><i class='bx bxs-videos'></i> Video Editing</span>
+                            <span class="skill-percent">65%</span>
                         </div>
-                        <div class="progress">
-                            <h3>Web Development <span>70%</span></h3>
-                            <div class="bar"><span> </span></div>
-                        </div>
-                        <div class="progress">
-                            <h3>Problem-Solving <span>75%</span></h3>
-                            <div class="bar"><span> </span></div>
-                        </div>
-                        <div class="progress">
-                            <h3>Management <span>85%</span></h3>
-                            <div class="bar"><span> </span></div>
-                        </div>
+                        <div class="skill-bar"><span class="skill-fill" data-width="65"></span></div>
                     </div>
-                    <span class="animate scroll" style="--i:6;"></span>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name"><i class='bx bxs-globe'></i> Web Development</span>
+                            <span class="skill-percent">70%</span>
+                        </div>
+                        <div class="skill-bar"><span class="skill-fill" data-width="70"></span></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name"><i class='bx bxs-brain'></i> Problem Solving</span>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-bar"><span class="skill-fill" data-width="85"></span></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name"><i class='bx bxs-group'></i> Team Management</span>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-bar"><span class="skill-fill" data-width="85"></span></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name"><i class='bx bxs-palette'></i> UI/UX Design</span>
+                            <span class="skill-percent">60%</span>
+                        </div>
+                        <div class="skill-bar"><span class="skill-fill" data-width="60"></span></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name"><i class='bx bxs-git-branch'></i> Git & GitHub</span>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                        <div class="skill-bar"><span class="skill-fill" data-width="75"></span></div>
+                    </div>
                 </div>
             </div>
-
-
         </div>
     </section>
 
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="section-header" data-reveal="up">
+            <span class="section-tag">What I've built</span>
+            <h2 class="heading">My <span class="gradient-text">Projects</span></h2>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card glass-card" data-reveal="up" style="--delay:0.1s">
+                <div class="project-icon"><i class='bx bxs-shopping-bag'></i></div>
+                <div class="project-content">
+                    <div class="project-tags">
+                        <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+                    </div>
+                    <h3>E-Commerce Website</h3>
+                    <p>A fully responsive e-commerce web UI with product listings, cart functionality, and smooth
+                        animations.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/MauryaShubhamkumar" target="_blank" class="project-link">
+                            <i class='bx bxl-github'></i> Code
+                        </a>
+                        <a href="#" class="project-link project-demo">
+                            <i class='bx bx-link-external'></i> Live Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
 
-    <!-- contact section design -->
+            <div class="project-card glass-card" data-reveal="up" style="--delay:0.25s">
+                <div class="project-icon"><i class='bx bxs-bot'></i></div>
+                <div class="project-content">
+                    <div class="project-tags">
+                        <span class="tag">C++</span><span class="tag">DSA</span><span class="tag">Algorithms</span>
+                    </div>
+                    <h3>DSA Problem Solver</h3>
+                    <p>A collection of 100+ algorithmic solutions in C++ covering arrays, graphs, DP, trees and more —
+                        optimized for competitive programming.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/MauryaShubhamkumar" target="_blank" class="project-link">
+                            <i class='bx bxl-github'></i> Code
+                        </a>
+                    </div>
+                </div>
+            </div>
 
+            <div class="project-card glass-card" data-reveal="up" style="--delay:0.4s">
+                <div class="project-icon"><i class='bx bxs-user-detail'></i></div>
+                <div class="project-content">
+                    <div class="project-tags">
+                        <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span>
+                    </div>
+                    <h3>Personal Portfolio</h3>
+                    <p>This very portfolio — designed and coded from scratch with glassmorphism, particle animations,
+                        and a premium dark theme.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/MauryaShubhamkumar" target="_blank" class="project-link">
+                            <i class='bx bxl-github'></i> Code
+                        </a>
+                        <a href="#home" class="project-link project-demo">
+                            <i class='bx bx-link-external'></i> Live
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
     <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>Me!</span> <span class="animate scroll" style="--i:1;"></span></h2>
-        <form action="#">
-            <div class="input-box">
-                <div class="input-field">
-                    <input type="text" placeholder="Full Name" required>
-                    <span class="focus"></span>
+        <div class="section-header" data-reveal="up">
+            <span class="section-tag">Get in touch</span>
+            <h2 class="heading">Contact <span class="gradient-text">Me!</span></h2>
+        </div>
+        <div class="contact-wrapper">
+            <div class="contact-info" data-reveal="left">
+                <div class="contact-info-item glass-card">
+                    <i class='bx bxs-envelope'></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p>maurya.shubhamkumar@iitjammu.ac.in</p>
+                    </div>
                 </div>
-                <div class="input-field">
-                    <input type="text" placeholder="Email Address" required>
-                    <span class="focus"></span>
+                <div class="contact-info-item glass-card">
+                    <i class='bx bxl-linkedin'></i>
+                    <div>
+                        <h4>LinkedIn</h4>
+                        <p>shubham-kumar-maurya-46455a24b</p>
+                    </div>
                 </div>
-                <span class="animate scroll" style="--i:3;"></span>
+                <div class="contact-info-item glass-card">
+                    <i class='bx bxl-github'></i>
+                    <div>
+                        <h4>GitHub</h4>
+                        <p>MauryaShubhamkumar</p>
+                    </div>
+                </div>
+                <div class="contact-info-item glass-card">
+                    <i class='bx bxs-map'></i>
+                    <div>
+                        <h4>Location</h4>
+                        <p>Jammu, India</p>
+                    </div>
+                </div>
             </div>
 
-            <div class="input-box">
-                <div class="input-field">
-                    <input type="number" placeholder="Mobile Number" required>
-                    <span class="focus"></span>
+            <!-- Toast Notification -->
+            <div id="form-toast" class="form-toast" role="alert" aria-live="polite"></div>
+
+            <form id="contact-form" action="https://formspree.io/f/xrereevl" method="POST"
+                class="contact-form glass-card" data-reveal="right">
+                <input type="hidden" name="_subject" value="New Portfolio Contact — SKM Portfolio" />
+                <div class="form-row">
+                    <div class="input-field">
+                        <input type="text" id="name" name="name" placeholder=" " required />
+                        <label for="name">Full Name</label>
+                        <span class="input-border"></span>
+                    </div>
+                    <div class="input-field">
+                        <input type="email" id="email" name="email" placeholder=" " required />
+                        <label for="email">Email Address</label>
+                        <span class="input-border"></span>
+                    </div>
                 </div>
-                <div class="input-field">
-                    <input type="text" placeholder="Email Subject" required>
-                    <span class="focus"></span>
+                <div class="form-row">
+                    <div class="input-field">
+                        <input type="tel" id="phone" name="phone" placeholder=" " />
+                        <label for="phone">Phone Number</label>
+                        <span class="input-border"></span>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" id="subject" name="subject" placeholder=" " required />
+                        <label for="subject">Email Subject</label>
+                        <span class="input-border"></span>
+                    </div>
                 </div>
-                <span class="animate scroll" style="--i:5;"></span>
-            </div>
-
-            <div class="textarea-field">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
-                <span class="focus"></span>
-                <span class="animate scroll" style="--i:7;"></span>
-            </div>
-
-            <div class="btn-box btns">
-                <button type="submit" class="btn">Submit </button>
-                <span class="animate scroll" style="--i:9;"></span>
-            </div>
-
-        </form>
+                <div class="input-field textarea-field">
+                    <textarea id="message" name="message" rows="5" placeholder=" " required></textarea>
+                    <label for="message">Your Message</label>
+                    <span class="input-border"></span>
+                </div>
+                <button type="submit" id="submit-btn" class="btn btn-primary btn-submit">
+                    <span>Send Message</span>
+                    <i class='bx bxs-send'></i>
+                </button>
+            </form>
+        </div>
     </section>
 
-
-
-    <!-- footer design -->
-    <footer class="footer">
-        <div class="footer-text">
-            <p>Copyright &copy; 2024 by SKM | All Rights Reserved.</p>
-            <span class="animate scroll" style="--i:1;"></span>
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="logo-text">SKM</span><span class="logo-dot">.</span>
+                <p>Frontend Developer & CS Student at IIT Jammu. Building the future, one line of code at a time.</p>
+                <div class="footer-sci">
+                    <a href="http://www.linkedin.com/in/shubham-kumar-maurya-46455a24b" target="_blank"
+                        aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://github.com/MauryaShubhamkumar" target="_blank" aria-label="GitHub"><i
+                            class='bx bxl-github'></i></a>
+                    <a href="https://www.instagram.com/shubham6.022?utm_source=qr" target="_blank"
+                        aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#education">Journey</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
         </div>
-        <div class="footer-iconTop">
-            <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
-            <span class="animate scroll" style="--i:3;"></span>
+        <div class="footer-bottom">
+            <p>© 2024 Shubham Kumar Maurya — All Rights Reserved.</p>
+            <a href="#home" class="back-top" aria-label="Back to top">
+                <i class='bx bx-up-arrow-alt'></i>
+            </a>
         </div>
     </footer>
-
 
     <script src="script.js"></script>
 </body>
